@@ -1,9 +1,10 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.android.tools.build:gradle:3.5.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -13,12 +14,17 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.3"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdkVersion 24
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -31,6 +37,7 @@ android {
 }
 
 dependencies {
-    compile project(':UnityExport')
-    compile 'com.facebook.react:react-native:+'
+    implementation project(':unityLibrary')
+    implementation 'com.facebook.react:react-native:+'
+    implementation files('C:\\Users\\yigit\\Werkmap\\HAN\\Minor\\team-edit\\EditAR\\android\\unity\\unityLibrary\\libs\\unity-classes.jar')
 }
