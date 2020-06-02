@@ -39,5 +39,5 @@ android {
 dependencies {
     implementation project(':unityLibrary')
     implementation 'com.facebook.react:react-native:+'
-    implementation files('C:\\Users\\yigit\\Werkmap\\HAN\\Minor\\team-edit\\EditAR\\android\\unity\\unityLibrary\\libs\\unity-classes.jar')
+    implementation files('../../../android/unity/unityLibrary/libs/unity-classes.jar')
 }
